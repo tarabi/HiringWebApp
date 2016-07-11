@@ -42,22 +42,146 @@
 
 
     <body>
-    <form>
-    Select numbers:<br />
-    <select id="no" onchange="moveNumbers()">
-        <option>0</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-    </select>
-    <input type="text" id="result" size="20">
-    </form>
+        <nav class="navbar navbar-default navbar-pf" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><!--<img src="bower_components/patternfly/dist/img/brand-alt.svg" alt="PatternFly Application" />--> Red Hat Enterprise Hiring
+            </a>
+          </div>
+          <div class="collapse navbar-collapse navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-utility">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <span class="pficon pficon-user"></span>
+                  Brian Johnson <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">My Account</a>
+                  </li>
+                  <li>
+                    <a href="#">Sign Out</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-primary">
+              <li>
+                <a href="dashboard.html">Dashboard</a>
+              </li>
+              <li>
+                <a href="new-hire.html">New Hire</a>
+              </li>
+                    <li>
+                <a href="#">Hiring Status</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+            <div class="row row-cards-pf">
+            <div class="col-xs-12 col-sm-6 col-lg-12">
 
+    <p></p>
+
+<div class="card-pf-heading">
+    <h2 class="card-pf-title">
+        Candidate Information
+    </h2>
+</div>
+<form class="form-horizontal">
+  <div class="form-group"  >
+    <label class="col-sm-2 control-label">First Name</label>
+    <div class="col-sm-10">
+      <input type="text" id="fisrtNameInput" class="form-control">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Last Name</label>
+    <div class="col-sm-10">
+      <input type="text" id="lastNameInput" class="form-control">
+    </div>
+  </div>
+  <div class="form-group ">
+    <label class="col-sm-2 control-label">e-mail</label>
+    <div class="col-sm-10">
+      <input type="text" id="emailInput" class="form-control">
+    </div>
+  </div>
+  <div class="form-group ">
+    <label class="col-sm-2 control-label">Phone</label>
+    <div class="col-sm-10">
+      <input type="text" id="phoneInput" class="form-control">
+    </div>
+  </div>
+  <div class="form-group ">
+    <label class="col-sm-2 control-label">Address</label>
+    <div class="col-sm-10">
+      <input type="text" id="addressInput" class="form-control">
+    </div>
+  </div>
+  <div class="card-pf-heading">
+      <h2 class="card-pf-title">
+          Recruiting Information
+      </h2>
+  </div>
+
+  </div>
+        <div class="form-group">
+              <label class="col-sm-2 control-label" for="Checkboxes">Recruiting Method</label>
+
+              <div class="col-md-10 columns">
+                    <label class="checkbox-inline" for="Checkboxes_Referral">
+                      <input type="checkbox" name="Checkboxes" id="Checkboxes_Referral" value="Referral">
+                      Referral
+                    </label>
+                    <label class="checkbox-inline" for="Checkboxes_LinkedIn">
+                      <input type="checkbox" name="Checkboxes" id="Checkboxes_LinkedIn" value="">
+                      LinkedIn
+                    </label>
+                    <label class="checkbox-inline" for="Checkboxes_Monster">
+                      <input type="checkbox" name="Checkboxes" id="Checkboxes_Monster" value="Monster.com">
+                      Monster.com
+                    </label>
+                    <label class="checkbox-inline" for="Checkboxes_Dice">
+                      <input type="checkbox" name="Checkboxes" id="Checkboxes_Dice" value="Dice.com">
+                      Dice.com
+                    </label>
+
+                    <label class="checkbox-inline" for="Checkboxes_Other">
+                        <input type="checkbox" name="Checkboxes" id="Checkboxes_Other" value="Other">
+                          Other
+                    </label>
+                </div>
+            </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Initial Contact</label>
+        </div>
+        <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+        <div id="date-2" class="input-group date">
+            <input type="text" class="form-control bootstrap-datepicker" readonly><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+        </div>
+        <script>
+          $('#date-2').datepicker({
+            autoclose: true,
+            orientation: "top auto",
+            todayBtn: "linked",
+            todayHighlight: true
+          });
+        </script>
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10 text-center">
+                <button type="submit" class="btn btn-primary">Initiate Hiring</button>
+            </div>
+        </div>
+
+    </form>
     </body>
 </html>
