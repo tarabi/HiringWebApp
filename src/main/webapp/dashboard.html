@@ -1,7 +1,7 @@
 <html lang="en-us">
 <!--<![endif]-->
   <head>
-    <title>Dropdowns - PatternFly</title>
+    <title>Dashboard - Hiring Application</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +41,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/"><!--<img src="bower_components/patternfly/dist/img/brand-alt.svg" alt="PatternFly Application" />--> Red Hat Enterprise Hiring 
+    <a class="navbar-brand" href="/"><!--<img src="bower_components/patternfly/dist/img/brand-alt.svg" alt="PatternFly Application" />--> Red Hat Enterprise Hiring
     </a>
   </div>
   <div class="collapse navbar-collapse navbar-collapse-1">
@@ -224,18 +224,18 @@
           donutConfig.data = {
             type: "donut",
             columns: [
-              ["Used", 10],
-              ["Available", 90]
+              ["Hired", 10],
+              ["Not Hired", 90]
             ],
             groups: [
-              ["used", "available"]
+              ["Hired", "Not Hired"]
             ],
             order: null
           };
           donutConfig.tooltip = {
             contents: function (d) {
               return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                      Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                      Math.round(d[0].ratio * 100) + '%' + ' Candidates ' + d[0].name +
                       '</span>';
             }
           };
@@ -277,18 +277,18 @@
           donutConfig.data = {
             type: "donut",
             columns: [
-              ["Used", 1],
-              ["Available", 99]
+              ["Hired", 1],
+              ["Not Hired", 99]
             ],
             groups: [
-              ["used", "available"]
+              ["Hired", "Not Hired"]
             ],
             order: null
           };
           donutConfig.tooltip = {
             contents: function (d) {
               return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                      Math.round(d[0].ratio * 100) + '%' + ' GB ' + d[0].name +
+                      Math.round(d[0].ratio * 100) + '%' + ' Candidates ' + d[0].name +
                       '</span>';
             }
           };
@@ -330,18 +330,18 @@
           donutConfig.data = {
             type: "donut",
             columns: [
-              ["Used", 89],
-              ["Available", 11]
+              ["Accepted", 89],
+              ["Declined", 11]
             ],
             groups: [
-              ["used", "available"]
+              ["Accepted", "Declined"]
             ],
             order: null
           };
           donutConfig.tooltip = {
             contents: function (d) {
               return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                      Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
+                      Math.round(d[0].ratio * 100) + '%' + ' Candidates ' + d[0].name +
                       '</span>';
             }
           };
