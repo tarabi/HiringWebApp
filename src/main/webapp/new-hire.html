@@ -160,8 +160,8 @@
             </div>
 
         <div class="form-group">
-            <label class="col-sm-2 control-label">Initial Contact</label>
-        </div>
+            <label class="col-md-2 control-label">Initial Contact</label>
+
         <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
         <div id="date-2" class="input-group date">
             <input type="text" class="form-control bootstrap-datepicker" readonly><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
@@ -171,13 +171,15 @@
             autoclose: true,
             orientation: "top auto",
             todayBtn: "linked",
-            todayHighlight: true
+            todayHighlight: true,
+            keyboardNavigation: true
           });
         </script>
+        <p>
 
-
+        </p>
         <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10 text-center">
+            <div class="col-sm-10 text-center">
                 <button type="submit" class="btn btn-primary">Initiate Hiring</button>
             </div>
         </div>
